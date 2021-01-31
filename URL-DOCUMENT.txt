@@ -1,0 +1,65 @@
+Method: POST
+URL:	http://localhost:7070/api/v1/enroll 
+Body:
+{
+	"name": "Enrollee",
+	"birthDate": "12-12-1992",
+	"phoneNumber": "1234567891",
+	"dependents": [ 
+		{
+		"name": "Dependent 1",
+		"birthDate": "12-12-1991"
+	},
+	{
+		"name": "Dependent 2",
+		"birthDate": "12-12-1995"
+	}
+	]
+}
+============================================================================
+Modify Enrollee or (add or modify Dependent)
+Method: PUT
+URL:	http://localhost:7070/api/v1/enroll 
+Body:
+{
+	"id": 1
+	"name": "Enrollee",
+	"birthDate": "12-12-1992",
+	"phoneNumber": "1234567891",
+	"dependents": [ 
+		{
+		"id":2,
+		"name": "Dependent 1",
+		"birthDate": "12-12-1991"
+	},
+	{
+		"id":3,
+		"name": "Dependent 2",
+		"birthDate": "12-12-1995"
+	}
+	,
+	{
+		"name": "Dependent 3",
+		"birthDate": "12-12-1995"
+	}
+	]
+}
+============================================================================
+Get Enrollee or Dependent
+Method: GET
+URL:	http://localhost:7070/api/v1/enroll/{id} 
+Body:
+
+============================================================================
+Get all Enrollee or Dependent
+Method: GET
+URL:	http://localhost:7070/api/v1/enroll/
+Body:
+
+============================================================================
+Delete Enrollee or Dependent
+Method: DELETE
+URL:	http://localhost:7070/api/v1/enroll/{id} 
+Body:
+
+
